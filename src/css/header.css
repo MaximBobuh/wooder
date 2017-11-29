@@ -1,13 +1,27 @@
+:root{
+    --custom-height: 1000px;
+    --custom-white-div-height: 100px
+}
+
+@media screen and (device-height: 800px){
+    :root{
+        --custom-height: 400px;
+        --custom-white-div-height: 40px;
+    }
+}
+
+
 #header {
     background-image: url("../images/left_part_header_image.png") , url("../images/right_part_header_image.png");
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right top;
-    background-size: 55vw 1000px, 62vw 1000px;
+    background-size: 55vw var(--custom-height), 62vw var(--custom-height);
     background-blend-mode: overlay, screen;
     width: 100vw;
-    height: 1000px;
+    height: var(--custom-height);
     margin:0;
 }
+
 
 #header .black_div {
     background-color: black;
@@ -23,21 +37,23 @@
 
 #header .left_div {
     width: 38vw;
-    height: 1000px;
+    height: var(--custom-height);
 }
 
 #header .right_div {
-    width: 45vw;
-    height: 1000px;
+    width: 46vw;
+    height: var(--custom-height);
 }
 
 #header .center_div{
     width: 16vw;
-    height: 1000px;
+    height: var(--custom-height);
 }
 
-#header .bottom_white_div{
-    background-color: white;
+#header .bottom_white_div {
+    height: var(--custom-white-div-height);
     width: 54vw;
-    height: 100px;
+    background-color: white;
+    opacity: 0.85;
 }
+
