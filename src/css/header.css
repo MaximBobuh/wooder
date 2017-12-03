@@ -1,27 +1,32 @@
 :root{
-    --custom-height: 1000px;
-    --custom-white-div-height: 100px
+    --right-part-height: 1000px;
+    --left-part-height: 950px;
+    --custom-white-div-height: 50px
 }
 
-@media screen and (device-height: 800px){
+@media screen and (max-device-height: 800px){
     :root{
-        --custom-height: 400px;
-        --custom-white-div-height: 40px;
+        --right-part-height: 700px;
+        --left-part-height: 665px;
+        --custom-white-div-height: 35px;
     }
 }
-
 
 #header {
     background-image: url("../images/left_part_header_image.png") , url("../images/right_part_header_image.png");
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right top;
-    background-size: 55vw var(--custom-height), 62vw var(--custom-height);
-    background-blend-mode: overlay, screen;
+    background-size: 55vw var(--left-part-height), 62vw var(--right-part-height);
+    background-blend-mode: hard-light, normal;
     width: 100vw;
-    height: var(--custom-height);
+    height: var(--right-part-height);
     margin:0;
 }
 
+#header .background_div{
+    position: relative;
+    height: var(--right-part-height);
+}
 
 #header .black_div {
     background-color: black;
@@ -29,31 +34,30 @@
     float: left;
 }
 
-#header .light_black_div{
-    background-color: black;
-    opacity: 0.85;
-    float: left;
-}
-
 #header .left_div {
     width: 38vw;
-    height: var(--custom-height);
+    height: var(--left-part-height);
 }
 
 #header .right_div {
-    width: 46vw;
-    height: var(--custom-height);
+    width: 45vw;
+    height: var(--right-part-height);
 }
 
 #header .center_div{
-    width: 16vw;
-    height: var(--custom-height);
+    width: 17vw;
+    height: var(--right-part-height);
+    float: left;
+    background-color: black;
+    opacity: 0.75;
 }
 
 #header .bottom_white_div {
+    position: absolute;
+    bottom: 0;
     height: var(--custom-white-div-height);
-    width: 54vw;
-    background-color: white;
-    opacity: 0.85;
+    width: 55vw;
+    background-color: gray;
+    opacity: 0.4;
 }
 
