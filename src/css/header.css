@@ -21,10 +21,11 @@
     width: 100vw;
     height: var(--right-part-height);
     margin:0;
+    position: relative;
 }
 
 #header .background_div{
-    position: relative;
+    position: absolute;
     height: var(--right-part-height);
 }
 
